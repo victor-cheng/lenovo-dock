@@ -1,0 +1,6 @@
+#Lenovo TBT4
+[USB\VID_17EF&PID_30B4]
+Guid = LENOVO_DOCK\TBT4
+
+[LENOVO_DOCK\TBT4]
+Plugin = lenovo_dock
