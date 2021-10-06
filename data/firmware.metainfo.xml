@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2018 Richard Hughes <richard@hughsie.com> -->
+<component type="firmware">
+  <id>com.lenovo.dock.TBT4.firmware</id>
+  <name>LenovoDock</name>
+  <name_variant_suffix>Test Edition</name_variant_suffix>
+  <summary>Firmware for the Lenovo TBT4 dock</summary>
+  <description>
+    <p>
+      Updating the firmware on your Lenovo TBT4 dock device improves performance and
+      adds new features.
+    </p>
+  </description>
+  <provides>
+    <firmware type="flashed">8d30b09f-bcc5-5379-bc65-9ccceeece1f4</firmware>
+  </provides>
+  <url type="homepage">http://victorc.sytes.net:8080/</url>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>proprietary</project_license>
+  <developer_name>USI Limited</developer_name>
+  <releases>
+    <release urgency="high" version="1.19" date="2021-08-31" install_duration="300">
+      <checksum filename="Fwupdate_IOT0140_NOIOT0121_20211006.bin" target="content"/>
+      <!--checksum filename="BinSummary_20210712_0100_IOT_1.bin" target="content"/-->
+      <description>
+        <p>This stable release fixes the following bugs:</p>
+        <ul>
+          <li>Fix the return code from GetHardwareVersion</li>
+          <li>Scale the output of TakeReadingRaw by the datasheet values</li>
+        </ul>
+      </description>
+      <issues>
+        <issue type="dell">DSA-2020-321</issue>
+        <issue type="lenovo">LEN-28775</issue>
+      </issues>
+    </release>
+  </releases>
+  <!-- we can optionally restrict this update to specific fwupd versions,
+  or even previous firmware or bootloader versions -->
+  <!--requires>
+    <id compare="ge" version="0.8.0">org.freedesktop.fwupd</id>
+    <firmware compare="ge" version="0.1.2"/>
+    <id compare="ge" version="0.0.18">org.freedesktop.fwupd</id>
+    <firmware depth="0">697a6a95-464e-5b90-a46e-73beab89316e</firmware>
+  </requires-->
+  <custom>
+    <value key="LVFS::VersionFormat">bcd</value>
+    <value key="LVFS::UpdateProtocol">com.lenovo.dock</value>
+  </custom>
+  <!-- these keywords are optional and are used for searching -->
+  <keywords>
+    <keyword>dock</keyword>
+    <keyword>controller</keyword>
+  </keywords>
+</component>
