@@ -4,7 +4,7 @@
  *
  * SPDX-License-Identifier: LGPL-2.1+
  */
-
+//TEST
 #pragma once
 
 #include <fwupdplugin.h>
